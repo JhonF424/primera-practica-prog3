@@ -1,4 +1,4 @@
-const mongoose = rquire('mongoose')
+const mongoose = require('mongoose')
 const user_schema = mongoose.Schema({
 	name:{
 		type: String,
@@ -9,7 +9,7 @@ const user_schema = mongoose.Schema({
 		require: true
 	},
 	age:{
-		type: number,
+		type: Number,
 		require: true
 	},
 	email:{

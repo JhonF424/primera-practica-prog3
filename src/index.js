@@ -15,3 +15,11 @@ mongoose
 .connect(process.env.MONGODB_CONNECTION_STRING)
 .then(()=>console.log('Connect with mongodb'))
 .catch((error)=>console.error(error))
+
+const userSchemaRoutes = require('./routes/user_routes')
+execute_app.use(express.json())
+/*
+	Crear usuario: http://localhost:3000/dashboard/user
+	Consultar usuarios: http://localhost:3000/dashboard/users
+ */
+execute_app.use('/dashboard', userSchemaRoutes)
